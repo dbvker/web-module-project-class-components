@@ -69,7 +69,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='todo-wrapper'>
         <h2>Todo App!</h2>
         <TodoList handleToggleItem={this.handleToggleItem} todoList={this.state.todoList} />
         <TodoForm handleClearItem={this.handleClearItem} handleAddItem={this.handleAddItem} />

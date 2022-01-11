@@ -13,7 +13,6 @@ class TodoForm extends React.Component {
             ...this.state,
             input: e.target.value
         });
-        console.log(e.target.value)
     };
 
     handleAdd = e => {
@@ -31,14 +30,11 @@ class TodoForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleAdd}>
-                    <input onChange={this.handleChanges} value={this.state.input} type='text' name='item' placeholder="Add a task" />
-                    <button>Add Task</button>
-                    
-                </form>
+            <form>
+                <input onChange={this.handleChanges} value={this.state.input} type='text' name='item' placeholder="Add a task" /><br />
+                <button onClick={this.handleAdd}>Add Task</button>
                 <button onClick={this.handleClear}>Clear Completed</button>
-            </div>
+            </form>
         )
     };
 };
