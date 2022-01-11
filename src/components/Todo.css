@@ -1,0 +1,18 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-item{
+    margin-bottom: 10px;
+}
+
+.todo-item p{
+    margin: 0;
+    cursor: pointer;
+    display: inline;
+    user-select: none;
+}
+
+.completed{
+    text-decoration: line-through;
+}
