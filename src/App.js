@@ -38,9 +38,9 @@ class App extends React.Component {
     });
   }
 
-  handleAddItem = (task) => {
+  handleAddItem = task => {
     const newTask = {
-      name: task,
+      task: task,
       id: Date.now(),
       completed: false
     };
@@ -51,7 +51,7 @@ class App extends React.Component {
     });
   }
 
-  handleToggleItem = (task) => {
+  handleToggleItem = task => {
     this.setState({
       ...this.state,
       todoList: this.state.todoList.map(item => {
@@ -66,9 +66,6 @@ class App extends React.Component {
       })
     })
   }
-
-
-
 
   render() {
     return (

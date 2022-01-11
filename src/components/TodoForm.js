@@ -19,7 +19,9 @@ class TodoForm extends React.Component {
     handleAdd = e => {
         e.preventDefault()
         this.props.handleAddItem(this.state.input);
-        console.log('add todo has been clicked')
+        this.setState({
+            input: ''
+          });
     };
 
     handleClear = e => {
@@ -29,11 +31,14 @@ class TodoForm extends React.Component {
 
     render() {
         return (
-            <form>
-                <input onChange={this.handleChanges} type='text' name='item' placeholder="Add a task" />
-                <button onClick={this.handleAdd}>Add Task</button>
+            <div>
+                <form onSubmit={this.handleAdd}>
+                    <input onChange={this.handleChanges} value={this.state.input} type='text' name='item' placeholder="Add a task" />
+                    <button>Add Task</button>
+                    
+                </form>
                 <button onClick={this.handleClear}>Clear Completed</button>
-            </form>
+            </div>
         )
     };
 };
